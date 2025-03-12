@@ -1,0 +1,125 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e672b3;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Title */
+h1 {
+    font-size: 24px; 
+    color: #ff69b4;
+}
+
+/* Cake Image */
+.cake-animation img {
+    width: 80%;  /* Adjusted for mobile */
+    max-width: 300px; /* Maximum size */
+    height: auto;
+    opacity: 0.5;
+    margin-top: 20px;
+}
+
+/* Gift Button */
+.gift-btn {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #ff4081;
+    color: white;
+}
+
+.gift-btn:hover {
+    background-color: #d81b60;
+}
+
+/* Falling Flowers */
+.flower-shower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Flower Animation */
+.flower {
+    position: absolute;
+    top: -50px;
+    font-size: 18px; /* Smaller for mobile */
+    color: pink;
+    opacity: 0.8;
+    animation: fall linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* Gift Box Centering */
+.gift-box {
+    width: 90%;  /* Adjust width for smaller screens */
+    max-width: 400px;  /* Limits max size */
+    background-color: white;
+    border: 5px solid #ff4081;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+/* Thali Image Adjustments */
+.gift-image {
+    width: 100%;  /* Makes it responsive */
+    max-width: 350px;  /* Prevents too large scaling */
+    height: auto;
+    object-fit: cover; /* Ensures proper fitting */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e672b3;
+    text-align: center;
+    height: 100vh;
+    background-image: url('./image/backgroundImage1.jpg'); /* Ensure correct path */
+    background-size: cover;   /* Ensures full coverage */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-attachment: fixed; /* Keeps background fixed */
+}

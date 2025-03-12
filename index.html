@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: antiquewhite;">🎉 Happy Birthday! 🎂</h1>
+        <div class="cake-animation">
+            <img src="./image/birthdaycake2.jpg" alt="Birthday Cake">
+        </div>
+        <div class="wish">
+            <p style="color: antiquewhite;">Wishing you a day filled with love, joy, and all your favorite things!</p>
+        </div>
+        <button class="gift-btn" onclick="goToGiftPage()">🎁 Open Your Gift</button>
+    </div>
+
+    <!-- Flower Shower Effect -->
+    <div class="flower-shower"></div>
+    <script>
+        function createFlower() {
+            const flower = document.createElement("div");
+            flower.classList.add("flower");
+            flower.innerHTML = "🌸"; 
+    
+            // Random horizontal position
+            flower.style.left = Math.random() * 100 + "vw";
+    
+            // Random animation duration for variety
+            flower.style.animationDuration = Math.random() * 3 + 2 + "s"; // Between 2s and 5s
+    
+            // Append the flower to the flower-shower div
+            document.querySelector(".flower-shower").appendChild(flower);
+    
+            // Remove the flower after falling
+            setTimeout(() => {
+                flower.remove();
+            }, 5000); 
+        }
+    
+        // Generate flowers every 400ms (adjustable)
+        setInterval(createFlower, 400);
+    </script>
+    
+    <script>
+        function goToGiftPage() {
+            window.location.href = "gift.html"; 
+        }
+    </script>
+</body>
+</html>
