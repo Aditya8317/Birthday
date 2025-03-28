@@ -20,3 +20,19 @@ function createFlower() {
 
 // Generate flowers at intervals
 setInterval(createFlower, 300); // Every 300ms (adjust for more/less flowers)
+let index = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+function updateSlider() {
+    document.querySelector('.slider').style.transform = `translateX(-${index * 100}%)`;
+}
+
+function moveSlide(step) {
+    index += step;
+    if (index >= totalSlides) index = 0;
+    if (index < 0) index = totalSlides - 1;
+    updateSlider();
+}
+
+setInterval(() => moveSlide(1), 3000); // Auto-slide every 3 seconds
