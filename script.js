@@ -1,8 +1,8 @@
-// Function to create falling flowers
+
 function createFlower() {
     const flower = document.createElement("div");
     flower.classList.add("flower");
-    flower.innerHTML = "🌸"; // You can use any emoji like 🌼, 🌺
+    flower.innerHTML = "🌸"; 
     
     // Random horizontal position
     flower.style.left = Math.random() * 100 + "vw";
